@@ -142,12 +142,11 @@
     }
   }
 
-  if (typeof define === 'function' && define.amd) {
-    define(function() { return minigrid; });
-  } else if (typeof module !== 'undefined' && module.exports) {
+if (typeof module !== 'undefined' && module.exports) {
     module.exports = minigrid;
   } else {
     exports.minigrid = minigrid;
+    exports.init = init;
   }
 
 })(this);
